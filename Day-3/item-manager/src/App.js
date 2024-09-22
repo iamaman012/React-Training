@@ -51,7 +51,8 @@ function App() {
   const filteredAndSortedItems = useItemSearchSort(items, searchTerm, sortCriteria, sortOrder);
 
   return (
-    <div className="container">
+    <div className="container mt-4">
+     <h2 className='text-center mt-2'> Item Manager</h2>
       <div className='row'>
         <div className='col-md-6'>
       <Additem onAddItem={handleAdditem}/>
@@ -61,9 +62,11 @@ function App() {
       </div>
 
       </div>
+      <div className='row mt-5'>
       <DisplayItems items={filteredAndSortedItems} onRemoveItem={handleRemoveItem} 
        sortOrder={sortOrder} sortCriteria={sortCriteria} onSort={handleSort}
       />
+      </div>
     </div>
   );
 }

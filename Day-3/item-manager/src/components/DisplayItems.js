@@ -9,14 +9,14 @@ const DisplayItems = ({items,onRemoveItem,sortOrder,sortCriteria,onSort}) => {
     <>
     <div className='container'>
         <table className='table table-stripped'>
-            <thead>
+            <thead className='text-center'>
                 <tr>
                     <th scope='col' onClick={()=>onSort("name")}>Item Name {sortCriteria==="name" ? (sortOrder==="asc"?"↑":"↓"):" "}</th>
                     <th scope='col' onClick={()=>onSort("description")}>Description {sortCriteria==="description"? (sortOrder==="asc"?"↑":"↓"):" "}</th>
                     <th scope='col'>Action</th>
                 </tr>
             </thead>
-           <tbody>
+           <tbody className='text-center '>
                 {items.map((item)=>(
                     <tr key={item.id}>
                         <td scope='row'>{item.name}</td>

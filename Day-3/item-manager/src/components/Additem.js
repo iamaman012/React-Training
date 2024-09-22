@@ -43,7 +43,7 @@ const Additem = ({onAddItem}) => {
             />
           </div>
         </div>
-        <button type="submit" className="btn btn-primary">Submit</button>
+        <button type="submit" className="btn btn-dark btn-sm">Add Item</button>
       </form>
     </div>
 
